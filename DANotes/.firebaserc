@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "danotes-6f43f": {
+      "hosting": {
+        "danotes": [
+          "danotes-6f43f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "danotes-6f43f"
+  }
+}
