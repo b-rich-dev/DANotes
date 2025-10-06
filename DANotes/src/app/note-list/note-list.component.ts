@@ -22,10 +22,14 @@ export class NoteListComponent {
   constructor(private noteService: NoteListService) { }
 
   getList(status: "notes" | "trash"): Note[] {
-    if (status == "trash") {
-      return this.noteService.trashNotes;
+    if (status == "notes") {
+      if(this.favFilter == "all") {
+        return this.noteService.normalNotes;
+      } else {
+        return this.noteService.markedNotes;
+      }
     } else {
-      return this.noteService.normalNotes;
+      return this.noteService.trashNotes;
     }
   }
 
